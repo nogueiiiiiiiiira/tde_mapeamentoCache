@@ -1,6 +1,5 @@
 memoria = []
 page_faults = 0
-
 paginas = [4, 3, 25, 8, 19, 6, 25, 8, 16, 35, 45, 22, 8, 3, 16, 25, 7]
 quadros = 8
 
@@ -35,7 +34,6 @@ print("Memória final:", memoria)
 
 memoria = []
 page_faults = 0
-
 paginas = [4, 5, 7, 9, 46, 45, 14, 4, 64, 7, 65, 2, 1, 6, 8, 45, 14, 11]
 quadros = 8
 
@@ -61,7 +59,7 @@ if posicao_11 != -1:
     print("\n1B (FIFO) - A página 11 ficou na posição:", posicao_11)
 else:
     print("\n1B (FIFO) - A página 11 não ficou na memória")
-
+    
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
 
@@ -70,7 +68,6 @@ print("Memória final:", memoria)
 
 memoria = []
 page_faults = 0
-
 paginas = [4, 6, 7, 8, 1, 6, 10, 15, 16, 4, 2, 1, 4, 6, 12, 15, 16, 11]
 quadros = 8
 
