@@ -16,6 +16,7 @@ for pagina in paginas:
         if len(memoria) < quadros:
             memoria.append(pagina)
         else:
+            # Encontra a página mais recentemente usada (MRU)
             pagina_mru = memoria[0]
             for p in memoria:
                 if ultimo_acesso[p] > ultimo_acesso[pagina_mru]:
@@ -24,16 +25,22 @@ for pagina in paginas:
             memoria.remove(pagina_mru)
             memoria.append(pagina)
 
-if 7 in memoria:
-    print("\n1A (MRU) - A página 7 ficou na posição:", memoria.index(7))
+posicao_7 = -1
+
+for i in range(len(memoria)):
+    if memoria[i] == 7:
+        posicao_7 = i        
+
+if posicao_7 != -1:
+    print("\n1A (MRU) - A página 7 ficou na posição:", posicao_7)
 else:
     print("\n1A (MRU) - A página 7 não ficou na memória")
-
+    
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
 
-
 # reiniciando para 1B
+
 memoria = []
 page_faults = 0
 ultimo_acesso = {}
@@ -60,13 +67,21 @@ for pagina in paginas:
             memoria.remove(pagina_mru)
             memoria.append(pagina)
 
-if 11 in memoria:
-    print("\n1B (MRU) - A página 11 ficou na posição:", memoria.index(11))
+posicao_11 = -1
+
+for i in range(len(memoria)):
+    if memoria[i] == 11:
+        posicao_11 = i
+        
+
+if posicao_11 != -1:
+    print("\n1B (MRU) - A página 11 ficou na posição:", posicao_11)
 else:
     print("\n1B (MRU) - A página 11 não ficou na memória")
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
+
 
 # reiniciando para 1C
 
@@ -96,10 +111,17 @@ for pagina in paginas:
             memoria.remove(pagina_mru)
             memoria.append(pagina)
 
-if 11 in memoria:
-    print("\n1C (MRU) - A página 11 ficou na posição:", memoria.index(11))
+posicao_11 = -1
+
+for i in range(len(memoria)):
+    if memoria[i] == 11:
+        posicao_11 = i
+        
+
+if posicao_11 != -1:
+    print("\n1C (MRU) - A página 11 ficou na posição:", posicao_11)
 else:
     print("\n1C (MRU) - A página 11 não ficou na memória")
-
+    
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
