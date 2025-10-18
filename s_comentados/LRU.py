@@ -8,15 +8,15 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1
+        page_faults = page_faults + 1+ 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
             fila.append(pagina)
         else:
             pagina_removida = fila.pop(0)
-            memoria.remove(pagina_removida)
-            memoria.append(pagina)
+            index = memoria.index(pagina_removida)
+            memoria[index] = pagina
             fila.append(pagina)
     else:
         fila.remove(pagina)
@@ -29,15 +29,16 @@ for i in range(len(memoria)):
         posicao_7 = i
         
 if posicao_7 != -1:
-    print("\n1A (LRU) - A página 7 ficou na posição:", posicao_7)
+    print("\n1A (LRU) - A página 7 ficou na posição:", posicao_7 + 1)
 else:
     print("\n1A (LRU) - A página 7 não ficou na memória")
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
+print("\nConteúdo dos quadros:")
+for i, pagina in enumerate(memoria):
+    print(f"Quadro {i + 1}: Página {pagina}")
 
-
-# reiniciando para 1B
 
 memoria = []
 page_faults = 0
@@ -49,15 +50,15 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1
+        page_faults = page_faults + 1+ 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
             fila.append(pagina)
         else:
             pagina_removida = fila.pop(0)
-            memoria.remove(pagina_removida)
-            memoria.append(pagina)
+            index = memoria.index(pagina_removida)
+            memoria[index] = pagina
             fila.append(pagina)
     else:
         fila.remove(pagina)
@@ -70,15 +71,16 @@ for i in range(len(memoria)):
         posicao_11 = i
         
 if posicao_11 != -1:
-    print("\n1B (LRU) - A página 11 ficou na posição:", posicao_11)
+    print("\n1B (LRU) - A página 11 ficou na posição:", posicao_11 + 1)
 else:
     print("\n1B (LRU) - A página 11 não ficou na memória")
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
+print("\nConteúdo dos quadros:")
+for i, pagina in enumerate(memoria):
+    print(f"Quadro {i + 1}: Página {pagina}")
 
-
-# reiniciando para 1C
 
 memoria = []
 page_faults = 0
@@ -90,15 +92,15 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1
+        page_faults = page_faults + 1+ 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
             fila.append(pagina)
         else:
             pagina_removida = fila.pop(0)
-            memoria.remove(pagina_removida)
-            memoria.append(pagina)
+            index = memoria.index(pagina_removida)
+            memoria[index] = pagina
             fila.append(pagina)
     else:
         fila.remove(pagina)
@@ -111,9 +113,12 @@ for i in range(len(memoria)):
         posicao_11 = i
 
 if posicao_11 != -1:
-    print("\n1C (LRU) - A página 11 ficou na posição:", posicao_11)
+    print("\n1C (LRU) - A página 11 ficou na posição:", posicao_11 + 1)
 else:
     print("\n1C (LRU) - A página 11 não ficou na memória")
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
+print("\nConteúdo dos quadros:")
+for i, pagina in enumerate(memoria):
+    print(f"Quadro {i + 1}: Página {pagina}")
