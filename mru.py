@@ -16,7 +16,6 @@ for pagina in paginas:
         if len(memoria) < quadros:
             memoria.append(pagina)
         else:
-            # Encontra a página mais recentemente usada (MRU)
             pagina_mru = memoria[0]
             for p in memoria:
                 if ultimo_acesso[p] > ultimo_acesso[pagina_mru]:
