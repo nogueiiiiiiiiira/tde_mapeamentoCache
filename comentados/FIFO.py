@@ -10,7 +10,9 @@ for pagina in paginas:
             memoria.append(pagina)  # adiciona a página na memória
         else:
             memoria[ponteiro] = pagina  # substitui a página apontada pelo ponteiro
-            ponteiro = (ponteiro + 1) % quadros  # offset
+            ponteiro = ponteiro + 1
+            if ponteiro == quadros:
+                ponteiro = 0
         page_faults = page_faults + 1 # aumenta o contador
 
 posicao_7 = -1  # posição da página 7 na memória, -1 indica não encontrada
@@ -25,9 +27,7 @@ else:
 
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1B
@@ -44,7 +44,9 @@ for pagina in paginas:
             memoria.append(pagina)
         else:
             memoria[ponteiro] = pagina
-            ponteiro = (ponteiro + 1) % quadros
+            ponteiro = ponteiro + 1
+            if ponteiro == quadros:
+                ponteiro = 0
         page_faults = page_faults
 
 posicao_11 = -1
@@ -59,9 +61,7 @@ else:
 
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1C
@@ -78,7 +78,9 @@ for pagina in paginas:
             memoria.append(pagina)
         else:
             memoria[ponteiro] = pagina
-            ponteiro = (ponteiro + 1) % quadros
+            ponteiro = ponteiro + 1
+            if ponteiro == quadros:
+                ponteiro = 0
         page_faults = page_faults
 
 posicao_11 = -1
@@ -93,6 +95,4 @@ else:
 
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+

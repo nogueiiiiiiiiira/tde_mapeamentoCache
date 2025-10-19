@@ -1,5 +1,6 @@
 memoria = []
 page_faults = 0
+
 ultimo_acesso = {}
 tempo = 0
 
@@ -29,7 +30,6 @@ posicao_7 = -1
 for i in range(len(memoria)):
     if memoria[i] == 7:
         posicao_7 = i
-        break
 
 if posicao_7 != -1:
     print("\n1A (MRU) - A página 7 ficou na posição:", posicao_7 + 1)
@@ -38,9 +38,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 memoria = []
@@ -82,9 +80,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 memoria = []
@@ -126,6 +122,4 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+

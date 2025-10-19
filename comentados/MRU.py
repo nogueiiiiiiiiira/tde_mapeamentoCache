@@ -30,7 +30,6 @@ posicao_7 = -1  # posição da página 7 na memória, -1 indica não encontrada
 for i in range(len(memoria)):
     if memoria[i] == 7:
         posicao_7 = i  # armazena a posição da página 7
-        break
 
 if posicao_7 != -1:
     print("\n1A (MRU) - A página 7 ficou na posição:", posicao_7 + 1)
@@ -39,9 +38,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1B
@@ -85,9 +82,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1C
@@ -131,6 +126,4 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+

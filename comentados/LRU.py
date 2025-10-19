@@ -34,9 +34,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1B
@@ -78,9 +76,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 # reinicia para 1C
@@ -122,6 +118,4 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+

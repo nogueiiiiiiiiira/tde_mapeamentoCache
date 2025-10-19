@@ -8,7 +8,7 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
@@ -35,9 +35,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 memoria = []
@@ -50,7 +48,7 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
@@ -77,9 +75,7 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
 
 
 memoria = []
@@ -92,7 +88,7 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
@@ -119,6 +115,4 @@ else:
     
 print("Page Faults:", page_faults)
 print("Memória final:", memoria)
-print("\nConteúdo dos quadros:")
-for i, pagina in enumerate(memoria):
-    print(f"Quadro {i + 1}: Página {pagina}")
+
