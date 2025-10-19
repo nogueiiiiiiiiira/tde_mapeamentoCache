@@ -36,3 +36,7 @@ Page Faults Totais:
 # Qual a Melhor Política de Substituição?
 
 Baseado nos page faults totais, nos exemplos dados, o MRU apresentou a melhor performance geral, seguido pelo LRU e FIFO.
+
+# Link
+
+https://youtu.be/StVvrrPjV-M
