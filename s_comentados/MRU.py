@@ -54,7 +54,7 @@ for pagina in paginas:
     ultimo_acesso[pagina] = tempo
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)

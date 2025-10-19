@@ -47,7 +47,7 @@ for pagina in paginas:
             ponteiro = ponteiro + 1
             if ponteiro == quadros:
                 ponteiro = 0
-        page_faults = page_faults
+        page_faults = page_faults + 1
 
 posicao_11 = -1
 for i in range(len(memoria)):
@@ -81,7 +81,7 @@ for pagina in paginas:
             ponteiro = ponteiro + 1
             if ponteiro == quadros:
                 ponteiro = 0
-        page_faults = page_faults
+        page_faults = page_faults + 1
 
 posicao_11 = -1
 for i in range(len(memoria)):

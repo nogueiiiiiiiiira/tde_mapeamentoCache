@@ -49,7 +49,7 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
@@ -91,7 +91,7 @@ quadros = 8
 for pagina in paginas:
     
     if pagina not in memoria:
-        page_faults = page_faults + 1+ 1
+        page_faults = page_faults + 1
         
         if len(memoria) < quadros:
             memoria.append(pagina)
