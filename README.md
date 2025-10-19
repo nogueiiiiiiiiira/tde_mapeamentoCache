@@ -1,19 +1,14 @@
-Trabalho - Mapeamento de Memória Cache
+# Mapeamento Cachê
 
-===
+O FIFO (First-In, First-Out) substitui a página que está há mais tempo na memória. Ele usa uma lista chamada memoria para armazenar as páginas e um ponteiro que indica qual posição será substituída próxima.
 
-FIFO (First-In, First-Out):
-  - Substitui a página que está há mais tempo na memória
+O LRU (Least Recently Used) substitui a página que não é usada há mais tempo. Ele mantém uma fila que controla a ordem de acesso das páginas, onde a página no início é a menos recentemente usada.
 
-LRU (Least Recently Used):
-  - Substitui a página que não é utilizada há mais tempo
-
-MRU (Most Recently Used):
-  - Substitui a página que foi utilizada mais recentemente
+O MRU (Most Recently Used) substitui a página que foi usada mais recentemente. Ele usa um dicionário chamado ultimo_acesso para registrar o momento exato em que cada página foi acessada, permitindo identificar qual página foi a mais recente.
 
 ---
 
-Resultados
+# Resultados
 
 Caso A - Página 7:
   - FIFO: Posição 5. Page Faults: 13.
@@ -38,6 +33,6 @@ Page Faults Totais:
 
 ---
 
-Qual a Melhor Política de Substituição?
+# Qual a Melhor Política de Substituição?
 
 Baseado nos page faults totais, nos exemplos dados, o MRU apresentou a melhor performance geral, seguido pelo LRU e FIFO.
